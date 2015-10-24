@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<title>The world's eyes are on you</title>
+		<script src="googlyeyes.js" type="text/javascript"></script>
+		<script src="googlyedit.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		eyeDrawer();
+		window.addEventListener("DOMContentLoaded", function(){
+			var stupidOverlay = document.getElementById("stupidOverlay");
+			var eyeContainer = document.getElementById("eyesContainer");
+			stupidOverlay.style.setProperty("width", eyeContainer.clientWidth + "px");
+			stupidOverlay.style.setProperty("height", eyeContainer.clientHeight + "px");
+		}, false);
+		</script>
+	</head>
+	<body>
+		<div id="eyesContainer">
+			<object id="worldmap" data="worldmap.svg" type="image/svg+xml" ></object>
+			<div id="stupidOverlay" style="position: absolute; top: 0; left: 0;"></canvas>
+		</div>
+	</body>
+</html>
